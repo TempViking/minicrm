@@ -1,0 +1,147 @@
+$base-grey: #d6d6d6;
+$dark-grey: #6b7376;
+$base-green: #7cbf2c;
+$light-green: #fdffed;
+$base-blue: #30bbd1;
+$dangerous: #d95461;
+$base-font-size: 1.6rem;
+
+html {
+  font-size: 14px;
+}
+
+hr {
+  border-top-color: $base-grey;
+}
+
+.card {
+  padding: 2rem 4rem;
+  background-color: $light-green;
+  border-left: 8px solid $base-green;
+  border-radius: 5px;
+  text-align: left;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: $base-font-size;
+    color: $base-green;
+    margin-bottom: .5rem;
+  }
+  &__role {
+    font-size: $base-font-size;
+    color: $base-green;
+    margin-bottom: .5rem;
+  }
+  &__write-block {
+    padding: .5rem 0;
+  }
+  &__input {
+    font-size: $base-font-size;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: .75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #FFF;
+  border: 1px solid $base-grey;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #000;
+  &.btn_green {
+    background-color: $base-green;
+    border-color: $base-green;
+    color: #FFF;
+  }
+  &.btn_primary {
+    background-color: $base-grey;
+    color: #FFF;
+    cursor: default;
+    &.btn_active {
+      background-color: $base-blue;
+      border-color: $base-blue;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+  &.btn_danger {
+    background-color: $dangerous;
+    border-color: $dangerous;
+    color: #FFF;
+    cursor: pointer;
+  }
+}
+
+.action-buttons {
+  margin-top: 1rem;
+  &__cancel {
+    margin-left: 1rem;
+  }
+}
+
+.comment {
+  padding-top: 1rem;
+  &__message {
+    font-size: $base-font-size;
+  }
+  &__info {
+    margin-top: .5rem;
+  }
+  &__avatar {
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+  &__author {
+    font-size: 1rem;
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &__date {
+    color: $dark-grey;
+    text-transform: uppercase;
+  }
+  &__arrow-container {
+    height: 2rem;
+    width: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.popup {
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  min-width: 18rem;
+  &__choice {
+    padding: .75rem 2rem;
+    transition: background-color 300ms;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: $base-font-size;
+    &:not(:first-of-type) {
+      border-top: 1px solid $base-grey;
+    }
+    &:hover {
+      background-color: lighten($base-grey, 15%);
+    }
+  }
+}
